@@ -1,0 +1,2 @@
+imports:
+    - suites/ui/homepage/viewing_homepage_alerts.yml
