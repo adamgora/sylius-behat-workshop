@@ -4,7 +4,7 @@
         <defaults public="true" />
 
         <service id="app.behat.context.ui.browsing_homepage" class="App\Tests\Behat\Context\Ui\Homepage\BrowsingHomepageContext">
-            <argument id="app.behat.page.shop.homepage" />
+            <argument type="service" id="app.behat.page.shop.homepage" />
         </service>
     </services>
 </container>
