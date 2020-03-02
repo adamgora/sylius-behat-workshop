@@ -4,6 +4,7 @@ namespace App\Tests\Behat\Context\Ui\Homepage;
 
 use App\Tests\Behat\Page\Shop\Homepage\HomePageInterface;
 use Behat\Behat\Context\Context;
+use Webmozart\Assert\Assert;
 
 class BrowsingHomepageContext implements Context
 {
@@ -22,7 +23,9 @@ class BrowsingHomepageContext implements Context
      */
     public function theAlertWithClassShouldBeVisible(string $className)
     {
-        throw new PendingException();
+        $alert = $this->homePage->getAlertWithClass($className);
+
+        Assert::notNull($alert, sprintf("Alert with class %s not found", $className));
     }
 
 }
