@@ -4,5 +4,6 @@ default:
             contexts:
                 - 'sylius.behat.context.hook.doctrine_orm'
                 - 'sylius.behat.context.setup.channel'
+                - 'sylius.behat.context.ui.shop.homepage'
             filters:
                 tags: "@viewing_homepage_alerts && @ui"
