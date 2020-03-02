@@ -1,0 +1,14 @@
+{% extends '@SyliusShop/layout.html.twig' %}
+{% block content %}
+    <div id="alert">
+        <div class="homepage-alert">
+            <p>Alert</p>
+        </div>
+    </div>
+    <div id="header-buttons">
+    </div>
+    <h2 class="ui horizontal section divider header">
+        {{ 'sylius.ui.latest_products'|trans }}
+    </h2>
+    {{ render(url('sylius_shop_partial_product_index_latest', {'count': 4, 'template': '@SyliusShop/Product/_horizontalList.html.twig'})) }}
+{% endblock %}
