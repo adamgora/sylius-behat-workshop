@@ -3,5 +3,7 @@
     <services>
         <defaults public="true" />
 
+        <service id="app.behat.context.ui.browsing_homepage" class="App\Tests\Behat\Context\Ui\Homepage\BrowsingHomepageContext">
+        </service>
     </services>
 </container>
