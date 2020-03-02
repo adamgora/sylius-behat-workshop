@@ -1,0 +1,6 @@
+default:
+    suites:
+        ui_viewing_homepage_alerts:
+            contexts:
+            filters:
+                tags: "@viewing_homepage_alerts && @ui"
