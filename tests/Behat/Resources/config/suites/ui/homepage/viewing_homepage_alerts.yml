@@ -2,5 +2,7 @@ default:
     suites:
         ui_viewing_homepage_alerts:
             contexts:
+                - 'sylius.behat.context.hook.doctrine_orm'
+                - 'sylius.behat.context.setup.channel'
             filters:
                 tags: "@viewing_homepage_alerts && @ui"
