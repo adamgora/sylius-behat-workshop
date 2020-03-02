@@ -11,13 +11,11 @@ class HomePage extends BaseHomePage implements HomePageInterface
 {
     public function getAlertWithClass(string $className)
     {
-        $alert = $this->getElement('alert')->find('css', ".$className");
-
-        if (!$alert) {
-            throw new ElementNotFoundException($this->getSession());
+        try {
+            return $this->getElement('alert')->find('css', ".$className");
+        } catch (ElementNotFoundException $e) {
+            return null;
         }
-
-        return $alert;
     }
 
     protected function getDefinedElements(): array
