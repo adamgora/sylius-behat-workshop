@@ -10,7 +10,7 @@ Feature: Viewing links to latest products
 
   @javascript
   Scenario: Following latest products link
-    When I check latest products
+    When I visit homepage
     And I wait for the link with class "latest-products" to appear
-    And I click on the "Latest products" link
+    And I click on link with class "latest-products"
     Then I should see the product name "PHP T-Shirt"
