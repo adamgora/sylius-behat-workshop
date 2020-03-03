@@ -1,2 +1,3 @@
 imports:
     - suites/ui/homepage/viewing_homepage_alerts.yml
+    - suites/ui/homepage/viewing_homepage_buttons.yml
