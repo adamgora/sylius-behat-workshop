@@ -1,0 +1,22 @@
+{% extends 'SyliusShopBundle::layout.html.twig' %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const productLinks = document.getElementsByClassName('dimmable image');
+                const buttonHref = productLinks[0].getAttribute('href');
+                const container = document.getElementById('header-buttons');
+
+                const link = document.createElement('a');
+                link.setAttribute('href', buttonHref);
+                link.innerHTML = 'Latest product';
+                link.classList = 'latest-products';
+
+                container.appendChild(link);
+            },2000)
+        })
+    </script>
+{% endblock %}
