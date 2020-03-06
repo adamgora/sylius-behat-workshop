@@ -6,5 +6,9 @@
         <service id="app.behat.context.ui.browsing_homepage" class="App\Tests\Behat\Context\Ui\Homepage\BrowsingHomepageContext">
             <argument type="service" id="app.behat.page.shop.homepage" />
         </service>
+
+        <service id="app.behat.context.ui.admin.managing_units_of_measurement" class="App\Tests\Behat\Context\Ui\Admin\ManagingUnitsContext">
+            <argument type="service" id="app.behat.page.admin.unit_of_measurement.index" />
+        </service>
     </services>
 </container>

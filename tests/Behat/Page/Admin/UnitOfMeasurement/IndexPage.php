@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Behat\Page\Admin\Subcontractor;
+namespace App\Tests\Behat\Page\Admin\UnitOfMeasurement;
 
 use Sylius\Behat\Page\Admin\Crud\IndexPage as BaseIndexPage;
 
