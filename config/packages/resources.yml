@@ -1,0 +1,5 @@
+sylius_resource:
+    resources:
+        app.unit_of_measurement:
+            classes:
+                model: App\Entity\UnitOfMeasurement

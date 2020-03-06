@@ -1,0 +1,22 @@
+sylius_grid:
+    grids:
+        app_admin_unit_of_measurement:
+            driver:
+                options:
+                    class: '%app.model.unit_of_measurement.class%'
+            fields:
+                name:
+                    type: string
+                    label: sylius.ui.name
+                symbol:
+                    type: string
+                    label: sylius.ui.code
+            actions:
+                main:
+                    create:
+                        type: create
+                item:
+                    update:
+                        type: update
+                    delete:
+                        type: delete
