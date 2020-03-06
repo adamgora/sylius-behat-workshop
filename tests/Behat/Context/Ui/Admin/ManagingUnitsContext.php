@@ -5,7 +5,6 @@ namespace App\Tests\Behat\Context\Ui\Admin;
 
 use App\Entity\UnitOfMeasurement;
 use Behat\Behat\Context\Context;
-use FriendsOfBehat\PageObjectExtension\Page\UnexpectedPageException;
 use App\Tests\Behat\Page\Admin\UnitOfMeasurement\IndexPageInterface;
 use Webmozart\Assert\Assert;
 
@@ -39,14 +38,14 @@ class ManagingUnitsContext implements Context
     }
 
     /**
-     * @Then I should see the unit :unitOfMeasurement in the list
+     * @Then I should see the unit with name :unitOfMeasurement in the list
      */
-//    public function unitShouldAppearInTheStore(UnitOfMeasurement $unitOfMeasurement)
-//    {
-//        $this->indexPage->open();
-//
-//        Assert::true($this->indexPage->isSingleResourceOnPage(['symbol' => $unitOfMeasurement->getSymbol()]));
-//    }
+    public function unitShouldAppearInTheStore(UnitOfMeasurement $unitOfMeasurement)
+    {
+        $this->indexPage->open();
+
+        Assert::true($this->indexPage->isSingleResourceOnPage(['symbol' => $unitOfMeasurement->getSymbol()]));
+    }
 
 
 
