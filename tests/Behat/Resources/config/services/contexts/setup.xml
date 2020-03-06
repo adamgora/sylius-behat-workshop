@@ -4,5 +4,11 @@
     <services>
         <defaults public="true" />
 
+        <service id="app.behat.context.setup.unit_of_measurement" class="App\Tests\Behat\Context\Setup\UnitOfMeasurementContext">
+            <argument type="service" id="sylius.behat.shared_storage" />
+            <argument type="service" id="app.repository.unit_of_measurement" />
+            <argument type="service" id="app.factory.unit_of_measurement" />
+        </service>
+
     </services>
 </container>
