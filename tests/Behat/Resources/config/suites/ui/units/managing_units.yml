@@ -1,0 +1,14 @@
+default:
+    suites:
+        ui_managing_units:
+            contexts:
+                - sylius.behat.context.hook.doctrine_orm
+                - app.behat.context.transform.unit_of_measurement
+
+                - app.behat.context.setup.unit_of_measurement
+                - sylius.behat.context.setup.admin_security
+
+                - app.behat.context.ui.admin.managing_units_of_measurement
+
+            filters:
+                tags: "@managing_units && @ui"
