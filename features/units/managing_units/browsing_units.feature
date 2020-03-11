@@ -5,12 +5,12 @@ Feature: Browsing units
   I want to browse units of measurement
 
   Background:
-    And the store has unit "Meter" with symbol "m"
+    Given the store has unit "Meter" with symbol "m"
     And the store has unit "Kilogram" with symbol "kg"
     And I am logged in as an administrator
 
   @ui
-  Scenario: Browsing currencies in store
+  Scenario: Browsing units in store
     When I want to browse units of the store
     Then I should see 2 units in the list
     And I should see the unit with name "Kilogram" in the list
